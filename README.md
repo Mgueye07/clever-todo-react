@@ -145,10 +145,9 @@ Potential features for future versions:
 
 ## License
 
-This project is created for educational purposes.
+MIT License
 
 ## Acknowledgments
 
-- Built with [Lovable](https://lovable.dev)
 - UI components from [shadcn/ui](https://ui.shadcn.com)
 - Icons from [Lucide](https://lucide.dev)
