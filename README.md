@@ -1,73 +1,154 @@
-# Welcome to your Lovable project
+# To-Do List Application
 
-## Project info
+A modern, feature-rich To-Do List application built with React, TypeScript, and Tailwind CSS. This application demonstrates comprehensive state management, form validation, and persistent data storage using browser localStorage.
 
-**URL**: https://lovable.dev/projects/8cb3d36d-19e7-4b82-aff5-9bc670d37c74
+## Features
 
-## How can I edit this code?
+- ✨ **Add Tasks**: Create new tasks with name and description
+- ✏️ **Edit Tasks**: Update existing task details
+- 🗑️ **Delete Tasks**: Remove tasks with confirmation dialog
+- ✅ **Mark Complete**: Toggle task completion status with visual feedback
+- 🎯 **Filter Tasks**: View all, active, or completed tasks
+- 💾 **Persistent Storage**: Tasks are saved to localStorage
+- 🎨 **Beautiful UI**: Modern design with smooth animations
+- 📱 **Responsive**: Works perfectly on all device sizes
+- ♿ **Accessible**: Built with accessibility in mind
 
-There are several ways of editing your application.
+## Technologies Used
 
-**Use Lovable**
+- **React 18**: Modern UI library with hooks
+- **TypeScript**: Type-safe development
+- **Tailwind CSS**: Utility-first styling
+- **shadcn/ui**: Beautiful component library
+- **Vite**: Fast build tool
+- **localStorage**: Browser-based persistence
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/8cb3d36d-19e7-4b82-aff5-9bc670d37c74) and start prompting.
+## Component Architecture
 
-Changes made via Lovable will be committed automatically to this repo.
+The application is structured with clean, reusable components:
 
-**Use your preferred IDE**
+- `TaskForm`: Handles task creation and editing with validation
+- `TaskList`: Displays filtered list of tasks
+- `TaskItem`: Individual task with edit/delete/complete actions
+- `ConfirmDialog`: Reusable confirmation dialog for destructive actions
+- `useLocalStorage`: Custom hook for state persistence
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+## Form Validation
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+The application includes comprehensive form validation:
+- Task name is required
+- Task description is required
+- Real-time error messages
+- Visual error indicators
 
-Follow these steps:
+## Data Persistence
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+Tasks are automatically saved to browser localStorage:
+- Persists between browser sessions
+- Automatic sync on every change
+- No backend required
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+## Getting Started
 
-# Step 3: Install the necessary dependencies.
-npm i
+### Prerequisites
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+- Node.js (v16 or higher)
+- npm or yarn
+
+### Installation
+
+1. Clone the repository:
+```bash
+git clone <repository-url>
+cd <project-name>
+```
+
+2. Install dependencies:
+```bash
+npm install
+```
+
+3. Start the development server:
+```bash
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+4. Open your browser and navigate to:
+```
+http://localhost:8080
+```
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+### Building for Production
 
-**Use GitHub Codespaces**
+To create a production build:
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+```bash
+npm run build
+```
 
-## What technologies are used for this project?
+The built files will be in the `dist` directory.
 
-This project is built with:
+## Usage
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+### Adding a Task
+1. Fill in the task name and description fields
+2. Click "Add Task" button
+3. The task appears at the top of the list
 
-## How can I deploy this project?
+### Editing a Task
+1. Click the edit icon on any active task
+2. The form will populate with the task details
+3. Make your changes and click "Update Task"
+4. Click the X button to cancel editing
 
-Simply open [Lovable](https://lovable.dev/projects/8cb3d36d-19e7-4b82-aff5-9bc670d37c74) and click on Share -> Publish.
+### Completing a Task
+1. Click the checkbox next to any task
+2. The task will be visually marked as completed
+3. Completed tasks show with strikethrough text
 
-## Can I connect a custom domain to my Lovable project?
+### Deleting a Task
+1. Click the delete icon on any task
+2. Confirm deletion in the dialog
+3. The task is permanently removed
 
-Yes, you can!
+### Filtering Tasks
+- **All**: Shows all tasks
+- **Active**: Shows only incomplete tasks
+- **Completed**: Shows only completed tasks
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+## Design System
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+The application uses a custom design system with:
+- Gradient primary colors (purple/blue)
+- Success indicators (green)
+- Smooth transitions and animations
+- Card-based layout with shadows
+- Semantic color tokens
+
+## Browser Support
+
+Works in all modern browsers:
+- Chrome/Edge (latest)
+- Firefox (latest)
+- Safari (latest)
+
+## Future Enhancements
+
+Potential features for future versions:
+- Task priorities
+- Due dates and reminders
+- Task categories/tags
+- Search functionality
+- Drag-and-drop reordering
+- Dark mode toggle
+- Export/import tasks
+
+## License
+
+This project is created for educational purposes.
+
+## Acknowledgments
+
+- Built with [Lovable](https://lovable.dev)
+- UI components from [shadcn/ui](https://ui.shadcn.com)
+- Icons from [Lucide](https://lucide.dev)
